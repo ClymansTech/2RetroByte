@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: lime;
+}
+
+#header-img {
+  width: 100px;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://thumbs.dreamstime.com/b/retro-s-seamless-pattern-background-vintage-memphis-fashion-style-illustration-ideal-fabric-design-paper-print-website-57384117.jpg");
+  background-attachment: fixed;
+}
+
+.video-container {
+  width: 80%;
+  min-width: 200px;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: inset 0 -20px 25px -20px rgba(0, 0, 0, 0.6);
+}
+
+.desc {
+  padding: 8px;
+  border-radius: 8px;
+  margin: 13px;
+}
+
+#features .desc {
+  scroll-margin-top: 130px;
+}
+
+#features {
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+h1,
+form {
+  text-align: center;
+  margin: 34px;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1,
+nav {
+  font-family: "Righteous", cursive;
+}
+
+p {
+  font-family: "Righteous", cursive;
+}
+
+.feature {
+  display: flex;
+
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideIn 0.8s ease forwards;
+}
+
+h2 {
+  padding-bottom: 13px;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.icon i {
+  font-size: 2.5rem;
+}
+
+.icon {
+  margin: 21px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#submit {
+  margin: 13px;
+  padding: 5px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: grey;
+  font-weight: bold;
+}
+
+#submit:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px #ff00ff;
+}
+
+.nav-link {
+  padding: 0 8px;
+}
+
+footer {
+  padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#footer-img {
+  width: 30px;
+}
+
+@media screen and (max-width: 300px) {
+  .icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #header {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+
+  #header-img {
+    width: 50px;
+  }
+
+  #nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  body {
+    background-attachment: scroll, scroll;
+  }
+  html {
+    scroll-padding-top: 50px;
+  }
+}
+
+#arcade:hover,
+#vhs:hover,
+#retro:hover {
+  box-shadow: 0 0 34px #ff00ff;
+}
+
+#nav-bar .nav-link {
+  display: inline-block;
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+  transform-origin: center;
+}
+
+#nav-bar .nav-link:hover {
+  transform: scale(1.12);
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+.video-section {
+  margin-top: 21px;
+  text-align: center;
+}
+
+.logo-marquee {
+  overflow: hidden;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 89s linear infinite;
+}
+
+.logo-set {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding-right: 60px;
+}
+
+.logo-set img {
+  height: 44px;
+  width: auto;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.glow-text {
+  font-family: "Neonderthaw", sans-serif;
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua;
+}
+
+.pricing {
+  padding: 3rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pricing__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pricing__grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card__price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card__mo {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-left: 0.25rem;
+}
+
+.card__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
+
+.card__btn {
+  margin-top: auto;
+  display: inline-block;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .pricing__grid {
+    grid-template-columns: 1fr; /* all stack */
+  }
+
+  .card {
+    max-width: 520px; /* optional */
+    margin: 0 auto; /* optional */
+  }
+}
