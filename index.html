@@ -270,7 +270,12 @@
               <li>Email Support</li>
               <li>Basic Analytics</li>
             </ul>
-            <a class="card__btn" href="#">Choose Basic</a>
+            <a
+              class="card__btn"
+              onclick="event.preventDefault(); alert('Demo only — normally this would submit to Stripe or another payment gateway.');"
+              href=""
+              >Choose Basic</a
+            >
           </article>
 
           <article class="card card--featured">
@@ -284,9 +289,10 @@
             <a
               class="card__btn"
               href="#"
-              onsubmit="event.preventDefault(); alert('Employers...Demo only - normally this would submit request to Stripe or other payment gateway');"
-              >Choose Pro</a
+              onclick="event.preventDefault(); alert('Demo only — normally this would submit to Stripe or another payment gateway.');"
             >
+              Choose Pro
+            </a>
           </article>
 
           <article class="card">
@@ -297,7 +303,12 @@
               <li>Dedicated Support</li>
               <li>Team Access</li>
             </ul>
-            <a class="card__btn" href="#">Choose Team</a>
+            <a
+              class="card__btn"
+              onclick="event.preventDefault(); alert('Demo only — normally this would submit to Stripe or another payment gateway.');"
+              href=""
+              >Choose Team</a
+            >
           </article>
         </div>
       </section>
